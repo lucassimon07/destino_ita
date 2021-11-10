@@ -1,0 +1,36 @@
+
+CREATE SCHEMA IF NOT EXISTS `db_destinoita` DEFAULT CHARACTER SET utf8 ;
+USE `db_destinoita` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_destinoita`.`usuarios` (
+  `id_usuarios` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `usuario` VARCHAR(255) NOT NULL,
+  `senha_usuario` VARCHAR(255) NOT NULL,
+  `nome_usuario` VARCHAR(255) NOT NULL,
+  `tipo_usuario` TINYINT NOT NULL
+  );
+
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`atracoes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_destinoita`.`atracoes` (
+  `id_atracao` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nome_atracao` VARCHAR(255) NOT NULL,
+  `descricao_atracao` TEXT NOT NULL,
+   `categoria_atracao` VARCHAR(255) NOT NULL,
+  `telefone_atracao` VARCHAR(255) NULL,
+  `localizacao_atracao` VARCHAR(255) NOT NULL,
+  `imagem_atracao` VARCHAR(255) NOT NULL,
+  `horario_funcionamento_atracao` VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS `db_destinoita`.`telefones` (
+  `id_telefone` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   `nome_telefone` VARCHAR(255) NOT NULL,
+  `numero_telefone` VARCHAR(255) NOT NULL
+  );
